@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	pb "github.com/ichiaohsu/readr-micro/users/proto"
+	pb "github.com/ichiaohsu/readr-micro/users/server/proto"
 )
 
 type service struct {

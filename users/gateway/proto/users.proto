@@ -1,9 +1,14 @@
 syntax = "proto3";
 
 package go.micro.srv.users;
+import "google/api/annotations.proto";
 
 service UserService {
-    rpc Get(GetRequest) returns (Users) {}
+    rpc Get(GetRequest) returns (Users) {
+        option (google.api.http) = {
+            get: "/members/{id}"
+        };
+    }
 }
 
 message User {

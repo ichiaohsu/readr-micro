@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	pb "github.com/ichiaohsu/readr-micro/users/proto"
+	pb "github.com/ichiaohsu/readr-micro/users/server/proto"
 	"github.com/jmoiron/sqlx"
 )
 
@@ -21,6 +21,5 @@ func (u *User) Get(req *pb.GetRequest) (result []*pb.User, err error) {
 		log.Println(err)
 		return nil, err
 	}
-	log.Printf("length of result:%v", len(result))
 	return result, nil
 }
