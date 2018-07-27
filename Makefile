@@ -1,3 +1,15 @@
+RPC-BIN := rpc-app
+GATE-BIN := gate-app
+
+.PHONY: default
+default: build
+
+.PHONY: build
+build:
+	# env GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -o $(RPC-BIN) users/server/*.go
+	# env GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -o $(GATE-BIN) users/gateway/*.go
+	go build -a -o $(RPC-BIN) users/server/*.go
+	go build -a -o $(GATE-BIN) users/gateway/*.go
 user:
 	protoc -I/usr/local/include  -I. \
 		-I=$(GOPATH)/src -I=$(GOPATH)/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
