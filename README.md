@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.com/ichiaohsu/readr-micro.png)](https://travis-ci.com/ichiaohsu/readr-micro/builds)
 # readr-micro
 readr-micro is an experimental gRPC revision of [readr-restful](https://github.com/readr-media/readr-restful).
 Adopting go-grpc, grpc-gateway and postgresql
